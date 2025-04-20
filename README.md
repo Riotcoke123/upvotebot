@@ -33,7 +33,7 @@
     </li>
   </ul>
 
-  <h2>⚙️ Installation</h2>
+  <h2>Installation</h2>
   <ol>
     <li>Clone the repository:
       <pre><code>git clone https://github.com/Riotcoke123/upvotebot.git
