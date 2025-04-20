@@ -42,15 +42,15 @@ pip install webdriver-manager</code></pre>
         <li>Replace <code>USERNAME</code> and <code>PASSWORD</code> with your login credentials.</li>
         <li>Run the script:
             <pre><code>python upvotebot.py</code></pre>
-            This will start the bot, log you in, and begin upvoting posts automatically.
-        </li>
+            This will start the bot, log you in, and begin upvoting posts automatically.</li>
         <li>The bot will continue to scroll and upvote posts in a loop. To stop the bot, press <code>CTRL + C</code>.</li>
     </ol>
     <h2>API Keys for IP2</h2>
     <p>To use the API for IP2 (like the <code>x-api-key</code>, <code>x-api-secret</code>, and <code>x-xsrf-token</code>), you can refer to the official <a href="https://docs.scored.co/" target="_blank">Scored API Documentation</a>. The API requires authentication and allows you to make requests to the endpoint <code>https://api.scored.co/api/v2/</code>.</p>
     <p>Follow the provided guidelines to generate your keys and tokens. Keep in mind the rate limits and terms of use that must be adhered to while interacting with the API.</p>
     <h2>Known Issues</h2>
-    <p><strong>Bug:</strong> The bot skips some posts for upvoting, even though they haven't been upvoted yet. This may occur due to the logic used to track already upvoted posts, or due to a delay in page rendering that causes the upvote button to be temporarily unavailable. This issue is under investigation and may require further debugging.</p>
+    <p><strong>Login Delay:</strong> The bot may take a moment to log in. This delay is due to the time required for the page to fully load and the login process to complete.</p>
+    <p><strong>Upvote Skipping:</strong> The bot may sometimes skip over posts that have already been upvoted. This is because it tries to intelligently detect previously upvoted posts but may require more refinement in the logic for better accuracy. If a post is upvoted again by mistake, it is typically due to the dynamic nature of the site and occasional lapses in detecting the upvote state accurately.</p>
     <h2>License</h2>
     <p>This project is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU General Public License v3.0</a> - see the <a href="LICENSE">LICENSE</a> file for details.</p>
     <h2>Contributing</h2>
