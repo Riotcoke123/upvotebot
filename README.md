@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    <img src="https://github.com/user-attachments/assets/eaafe130-90c6-4d29-98f1-e17fb3e30108">
-    <h1>Upvote Bot</h1>
-    <p><strong>Upvote Bot</strong> is a simple bot that automatically upvotes posts on the "communities.win" website using Selenium WebDriver with Python. The bot navigates through posts, upvotes them if they are not already upvoted, and simulates human-like interactions (scrolling and random delays) to avoid detection.</p>
-    <h2>Features</h2>
-    <ul>
-        <li><strong>Login Automation:</strong> Automatically logs into the target website using provided credentials.</li>
-        <li><strong>Upvoting Posts:</strong> Identifies posts that haven't been upvoted yet and clicks the upvote button.</li>
-        <li><strong>Human-like Interaction:</strong> Simulates human scrolling and clicks with randomized delays between actions.</li>
-        <li><strong>Error Logging:</strong> Logs any errors or exceptions to a log file (<code>likebot-error.log</code>).</li>
-        <li><strong>Custom Headers:</strong> Custom headers are applied to avoid detection.</li>
-    </ul>
-    <h2>Requirements</h2>
-    <ul>
-        <li>Python 3.x</li>
-        <li>Chrome Browser</li>
-        <li>ChromeDriver (managed by <code>webdriver-manager</code>)</li>
-        <li>Selenium WebDriver</li>
-        <li><code>webdriver-manager</code> Python package</li>
-        <li><code>time</code>, <code>random</code>, <code>logging</code> modules (standard Python libraries)</li>
-    </ul>
-    <h2>Installation</h2>
-    <ol>
-        <li><strong>Clone this repository</strong>:
-            <pre><code>git clone https://github.com/Riotcoke123/upvotebot.git
+  <img src="https://github.com/user-attachments/assets/eaafe130-90c6-4d29-98f1-e17fb3e30108" alt="Bot Logo" style="max-width: 100%; height: auto;" />
+  
+  <h1>Upvote Bot</h1>
+  <p><strong>Upvote Bot</strong> is a Python script that automates the upvoting of posts on <code>communities.win</code> using Selenium WebDriver. It logs into the site, scrolls through the feed, and upvotes posts that haven’t already been voted on. The bot is designed to mimic human behavior with random delays and dynamic scrolling.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Automated Login:</strong> Secure login using CSS selectors and Selenium waits.</li>
+    <li><strong>Smart Voting:</strong> Skips posts already upvoted by identifying "active" vote buttons.</li>
+    <li><strong>Human Simulation:</strong> Scrolls and pauses with random intervals to reduce detection risk.</li>
+    <li><strong>Error Logging:</strong> Logs activity and errors via Python's <code>logging</code> module.</li>
+    <li><strong>Headless Setup Option:</strong> Easily extendable to run in headless environments.</li>
+  </ul>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Python 3.x</li>
+    <li>Google Chrome</li>
+    <li>ChromeDriver (installed automatically via <code>webdriver-manager</code>)</li>
+    <li>Python packages:
+      <ul>
+        <li><code>selenium</code></li>
+        <li><code>webdriver-manager</code></li>
+        <li>Standard libraries: <code>time</code>, <code>random</code>, <code>logging</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>⚙️ Installation</h2>
+  <ol>
+    <li>Clone the repository:
+      <pre><code>git clone https://github.com/Riotcoke123/upvotebot.git
 cd upvotebot</code></pre>
-        </li>
-        <li><strong>Install the required dependencies</strong>:
-            <pre><code>pip install -r requirements.txt</code></pre>
-            If <code>requirements.txt</code> doesn't exist, run the following commands to install the necessary libraries:
-            <pre><code>pip install selenium
-pip install webdriver-manager</code></pre>
-        </li>
-    </ol>
-    <h2>Usage</h2>
-    <ol>
-        <li>Replace <code>USERNAME</code> and <code>PASSWORD</code> with your login credentials.</li>
-        <li>Run the script:
-            <pre><code>python upvotebot.py</code></pre>
-            This will start the bot, log you in, and begin upvoting posts automatically.</li>
-        <li>The bot will continue to scroll and upvote posts in a loop. To stop the bot, press <code>CTRL + C</code>.</li>
-    </ol>
-    <h2>API Keys for IP2</h2>
-    <p>To use the API for IP2 (like the <code>x-api-key</code>, <code>x-api-secret</code>, and <code>x-xsrf-token</code>), you can refer to the official <a href="https://docs.scored.co/" target="_blank">Scored API Documentation</a>. The API requires authentication and allows you to make requests to the endpoint <code>https://api.scored.co/api/v2/</code>.</p>
-    <p>Follow the provided guidelines to generate your keys and tokens. Keep in mind the rate limits and terms of use that must be adhered to while interacting with the API.</p>
-    <h2>Known Issues</h2>
-    <p><strong>Login Delay:</strong> The bot may take a moment to log in. This delay is due to the time required for the page to fully load and the login process to complete.</p>
-    <p><strong>Upvote Skipping:</strong> The bot may sometimes skip over posts that have already been upvoted. This is because it tries to intelligently detect previously upvoted posts but may require more refinement in the logic for better accuracy. If a post is upvoted again by mistake, it is typically due to the dynamic nature of the site and occasional lapses in detecting the upvote state accurately.</p>
-    <h2>License</h2>
-    <p>This project is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU General Public License v3.0</a> - see the <a href="LICENSE">LICENSE</a> file for details.</p>
-    <h2>Contributing</h2>
-    <p>Feel free to fork this repository, create issues, and submit pull requests for bug fixes or improvements.</p>
-    <h2>Troubleshooting</h2>
-    <p>If you encounter any issues, please check the <code>likebot-error.log</code> file for error messages. You can also open an issue on the <a href="https://github.com/Riotcoke123/upvotebot/issues">GitHub Issues</a> page.</p>
-    <h2>Disclaimer</h2>
-    <p>This bot is for educational purposes only. Use it responsibly and be aware of the potential ethical and legal implications of automating interactions on websites.</p>
+    </li>
+    <li>Install dependencies:
+      <pre><code>pip install -r requirements.txt</code></pre>
+      Or manually:
+      <pre><code>pip install selenium webdriver-manager</code></pre>
+    </li>
+  </ol>
+
+  <h2>Usage</h2>
+  <ol>
+    <li>Edit the script to replace <code>USERNAME</code> and <code>PASSWORD</code> with your credentials.</li>
+    <li>Run the bot:
+      <pre><code>python upvotebot.py</code></pre>
+    </li>
+    <li>Press <kbd>CTRL + C</kbd> to stop the bot anytime.</li>
+  </ol>
+
+  <h2>License</h2>
+  <p>This project is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU AGPLv3</a>. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+  <h2>Contributing</h2>
+  <p>Pull requests and forks are welcome! File issues or suggest improvements on the <a href="https://github.com/Riotcoke123/upvotebot/issues">GitHub Issues</a> page.</p>
+
+  <h2>Troubleshooting</h2>
+  <p>Check <code>likebot-error.log</code> for error logs. Ensure Chrome and ChromeDriver versions are compatible. Use the Issues page if problems persist.</p>
+
+  <h2>Disclaimer</h2>
+  <p>This script is intended for educational and ethical use only. Automating interactions on websites without permission can violate terms of service. Use responsibly.</p>
 </body>
 </html>
