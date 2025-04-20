@@ -50,7 +50,7 @@ cd upvotebot</code></pre>
   <ol>
     <li>Edit the script to replace <code>USERNAME</code> and <code>PASSWORD</code> with your credentials.</li>
     <li>Run the bot:
-      <pre><code>python upvotebot.py</code></pre>
+      <pre><code>python script.py</code></pre>
     </li>
     <li>Press <kbd>CTRL + C</kbd> to stop the bot anytime.</li>
   </ol>
