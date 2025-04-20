@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <img src="https://github.com/user-attachments/assets/eaafe130-90c6-4d29-98f1-e17fb3e30108" alt="Bot Logo" style="max-width: 100%; height: auto;" />
-  
   <h1>Upvote Bot</h1>
   <p><strong>Upvote Bot</strong> is a Python script that automates the upvoting of posts on <code>communities.win</code> using Selenium WebDriver. It logs into the site, scrolls through the feed, and upvotes posts that haven’t already been voted on. The bot is designed to mimic human behavior with random delays and dynamic scrolling.</p>
 
