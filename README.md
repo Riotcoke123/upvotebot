@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>UpvoteBot</h1>
+    <h1>Up vote Bot</h1>
     <p><strong>UpvoteBot</strong> is a simple bot that automatically upvotes posts on the "communities.win" website using Selenium WebDriver with Python. The bot navigates through posts, upvotes them if they are not already upvoted, and simulates human-like interactions (scrolling and random delays) to avoid detection.</p>
     <h2>Features</h2>
     <ul>
